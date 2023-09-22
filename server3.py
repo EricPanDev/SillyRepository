@@ -18,6 +18,7 @@ def serve_image_preview():
 
     # Get the user agent from the request headers
     user_agent_string = request.headers.get('User-Agent', '')
+    print(user_agent_string)
 
     # Check if the user agent matches Discord's bot user agent
     if discord_user_agent in user_agent_string:
