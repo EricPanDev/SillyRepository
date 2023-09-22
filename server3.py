@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template_string
+from flask import Flask, request, render_template_string, redirect
 import user_agent
 
 URL_1 = "https://github.com/EricPanDev/SillyRepository/blob/main/bait.png"
