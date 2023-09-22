@@ -37,9 +37,9 @@ def serve_image(path):
 
         # Serve the appropriate image based on the bot's access count
         if bot_access_count % 2 == 1:
-            return send_file(io.BytesIO(downloaded_images[URL_1]), mimetype='image/png')
-        else:
             return send_file(io.BytesIO(downloaded_images[URL_2]), mimetype='image/png')
+        else:
+            return send_file(io.BytesIO(downloaded_images[URL_1]), mimetype='image/png')
     else:
         # Redirect to the Rickroll URL for human users
         return redirect("https://www.youtube.com/watch?v=dQw4w9WgXcQ", code=302)
