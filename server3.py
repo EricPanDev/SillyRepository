@@ -21,6 +21,7 @@ def serve_image_preview():
 
     # Check if the user agent matches Discord's bot user agent
     if discord_user_agent in user_agent_string:
+        print("disco bot")
         bot_access_count += 1  # Increment the bot's access count
 
         # Determine which image URL to use based on the bot's access count
@@ -44,6 +45,7 @@ def serve_image_preview():
 
     else:
         # Redirect to the Rickroll URL for human users
+        print("rickroll")
         return redirect("https://www.youtube.com/watch?v=dQw4w9WgXcQ", code=302)
 
 if __name__ == '__main__':
