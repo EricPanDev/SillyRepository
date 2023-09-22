@@ -21,7 +21,7 @@ def download_image(url):
 def serve_image():
     user_agent_string = request.headers.get('User-Agent', '')
 
-    if 'Discordbot' in user_agent_string:
+    if 1==1:
         # Check if the image is already downloaded, otherwise download it
         if URL_1 not in downloaded_images:
             downloaded_images[URL_1] = download_image(URL_1)
