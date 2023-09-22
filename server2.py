@@ -19,8 +19,9 @@ def download_image(url):
     else:
         return None
 
-@app.route('/')
-def serve_image():
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
+def serve_image(path):
     global bot_access_count
     user_agent_string = request.headers.get('User-Agent', '')
 
