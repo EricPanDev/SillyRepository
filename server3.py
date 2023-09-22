@@ -1,8 +1,8 @@
 from flask import Flask, request, render_template_string
 import user_agent
 
-URL_1 = "https://github.com/EricPanDev/SillyRepository/blob/main/bait.png?raw=true"
-URL_2 = "https://github.com/EricPanDev/SillyRepository/blob/main/real_image.png?raw=true"
+URL_1 = "https://github.com/EricPanDev/SillyRepository/blob/main/bait.png"
+URL_2 = "https://github.com/EricPanDev/SillyRepository/blob/main/real_image.png"
 
 app = Flask(__name__)
 
