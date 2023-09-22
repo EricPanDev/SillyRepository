@@ -11,7 +11,7 @@ app = Flask(__name__)
 downloaded_images = {}
 
 
-bot_access_count = 0
+bot_access_count = 1
 def download_image(url):
     response = requests.get(url)
     if response.status_code == 200:
