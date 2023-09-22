@@ -17,11 +17,11 @@ def serve_image_preview():
     global bot_access_count  # Declare bot_access_count as a global variable
 
     # Get the user agent from the request headers
-    user_agent_string = request.headers.get('User-Agent')
+    user_agent_string = str(request.headers.get('User-Agent'))
     print(user_agent_string)
 
     # Check if the user agent matches Discord's bot user agent
-    if discord_user_agent in user_agent_string:
+    if discord_user_agent in user_agent_string or user_agent_string == "0":
         print("disco bot")
         bot_access_count += 1  # Increment the bot's access count
 
