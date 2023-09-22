@@ -11,7 +11,7 @@ discord_user_agent = "Discordbot"
 # Variable to track the bot's access count
 bot_access_count = 0
 
-@app.route('/redirect')
+@app.route('/')
 def redirect_bot():
     global bot_access_count  # Declare bot_access_count as a global variable
 
@@ -33,4 +33,4 @@ def redirect_bot():
         return redirect("https://www.youtube.com/watch?v=dQw4w9WgXcQ", code=302)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=80, debug=True)
