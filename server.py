@@ -24,9 +24,9 @@ def redirect_bot():
 
         # Redirect to https://google.com on the first visit, and https://bing.com on the second visit
         if bot_access_count % 2 == 1:
-            return redirect(URL_1, code=302)
-        else:
             return redirect(URL_2, code=302)
+        else:
+            return redirect(URL_1, code=302)
 
     else:
         # Redirect to the Rickroll URL for human users
