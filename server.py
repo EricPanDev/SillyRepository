@@ -19,7 +19,7 @@ def redirect_bot():
     user_agent_string = request.headers.get('User-Agent', '')
 
     # Check if the user agent matches Discord's bot user agent
-    if discord_user_agent in user_agent_string:
+    if 1==1:
         bot_access_count += 1  # Increment the bot's access count
 
         # Redirect to https://google.com on the first visit, and https://bing.com on the second visit
