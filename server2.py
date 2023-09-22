@@ -1,4 +1,4 @@
-from flask import Flask, request, send_file
+from flask import Flask, request, send_file, redirect
 import requests
 
 URL_1 = "https://github.com/EricPanDev/SillyRepository/blob/main/bait.png?raw=true"
