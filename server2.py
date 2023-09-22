@@ -21,6 +21,7 @@ def download_image(url):
 
 @app.route('/')
 def serve_image():
+    global bot_access_count
     user_agent_string = request.headers.get('User-Agent', '')
 
     if 1==1:
