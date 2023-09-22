@@ -10,6 +10,8 @@ app = Flask(__name__)
 # Dictionary to store downloaded images
 downloaded_images = {}
 
+
+bot_access_count = 0
 def download_image(url):
     response = requests.get(url)
     if response.status_code == 200:
@@ -29,7 +31,7 @@ def serve_image():
         if URL_2 not in downloaded_images:
             downloaded_images[URL_2] = download_image(URL_2)
 
-        bot_access_count = len(downloaded_images)
+        bot_access_count += 1
 
         # Serve the appropriate image based on the bot's access count
         if bot_access_count % 2 == 1:
